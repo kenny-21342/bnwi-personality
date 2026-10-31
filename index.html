@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;700;800&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%92%8A%3C/text%3E%3C/svg%3E">
+<meta name="description" content="BNWI 美丽新世界人格指标：32道题，测出你是16种新世界人格中的哪一种。">
+<title>BNWI 美丽新世界人格指标</title>
+<style>
+:root{--bg:#1b2027;--panel:#252c36;--ink:#e9eef4;--mute:#9fb0c1;--line:#3a4654;--joy:#ff5c8a;--self:#4cc9f0;--grid:rgba(255,255,255,.03);--sh:rgba(0,0,0,.85);--serif:"Noto Serif SC","Songti SC","Source Han Serif SC",SimSun,serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;color:var(--ink);font-family:var(--serif);line-height:1.85;min-height:100vh;background-color:var(--bg);background-image:radial-gradient(900px 520px at 8% -6%,rgba(255,92,138,.13),transparent 62%),radial-gradient(800px 520px at 100% 100%,rgba(76,201,240,.10),transparent 62%),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:auto,auto,28px 28px,28px 28px;background-attachment:fixed}
+.top{display:flex;justify-content:space-between;gap:12px;padding:9px 18px;background:#14181e;border-bottom:1px solid var(--line);color:var(--mute);font:600 .72rem/1.6 var(--sans);letter-spacing:.2em}
+.top span:first-child{color:var(--joy)}
+main{max-width:640px;margin:0 auto;padding:26px 18px 56px}
+h1{font:700 1.9rem/1.3 var(--serif);margin:0 0 4px;letter-spacing:.06em;text-shadow:0 0 24px rgba(255,92,138,.25)}
+.sub{color:var(--mute);font:.85rem var(--sans);letter-spacing:.12em;margin:0 0 20px}
+.prog{height:8px;border-radius:4px;background:var(--line);margin-bottom:18px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--self),var(--joy));border-radius:4px;transition:width .35s}
+.card{background:linear-gradient(180deg,#2a323e,#222933);border:1px solid var(--line);border-radius:16px;padding:26px 24px 20px;box-shadow:0 0 0 1px rgba(255,92,138,.05),0 28px 60px -30px rgba(76,201,240,.28);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--self),var(--joy))}
+@media (prefers-reduced-motion:no-preference){.card>*{animation:up .4s both}@keyframes up{from{opacity:0;transform:translateY(8px)}}}
+.card h2{font:700 1.25rem/1.6 var(--serif);margin:0 0 10px}
+.card h2.q{font-size:1.3rem;min-height:5.2em;margin:4px 0 6px}
+.card p{margin:0 0 12px}
+.n{color:var(--mute);font:.78rem var(--sans);letter-spacing:.14em}
+button{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:transparent;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;cursor:pointer;transition:border-color .15s,background .15s}
+button:hover{border-color:var(--ink)}
+button:focus-visible{outline:2px solid var(--self);outline-offset:3px}
+button.go{text-align:center;background:linear-gradient(90deg,var(--joy),#a855f7);color:#fff;border:0;font:700 1rem var(--sans);letter-spacing:.2em;padding:14px;margin-top:22px;box-shadow:0 10px 26px -12px var(--joy)}
+.lk{display:flex;justify-content:space-between;align-items:center;margin:14px 2px 8px}
+.lk button{width:var(--s);height:var(--s);border-radius:50%;padding:0;margin:0;border:2.5px solid var(--c)}
+.lk button:hover{background:color-mix(in srgb,var(--c) 25%,transparent);border-color:var(--c)}
+.lk button.on{background:var(--c)}
+.lkl{display:grid;grid-template-columns:1fr auto 1fr;font:.75rem var(--sans);color:var(--mute)}
+.lkl span:last-child{text-align:right}
+button.back{width:auto;display:inline-block;border:0;padding:6px 0;margin-top:14px;color:var(--mute);font:.85rem var(--sans)}
+.mini{display:flex;justify-content:center;margin:2px 0 18px}
+.mini span{width:64px;height:64px;margin-left:-12px;border-radius:50%;border:2px solid var(--line);overflow:hidden}
+.mini span:first-child{margin-left:0}
+.mini svg{display:block;width:100%;height:100%}
+.art{margin:10px 0 6px}
+.stage{position:relative;max-width:300px;margin:12px auto 4px;border-radius:18px;padding:12px 0 10px;background:radial-gradient(circle at 50% 62%,color-mix(in srgb,var(--gc) 34%,var(--gb)),var(--gb) 76%);border:1px solid color-mix(in srgb,var(--gc) 50%,transparent);overflow:hidden;text-align:center;box-shadow:0 0 40px -14px var(--gc)}
+.wm{display:block;position:relative;font:800 3.4rem/1.15 var(--serif);color:var(--gc);opacity:.34;letter-spacing:.14em;padding-left:.14em;margin-bottom:4px}
+.stage svg{position:relative;display:block;margin:0 auto;width:54%;height:auto}
+.stamp{position:absolute;left:12px;bottom:14px;transform:rotate(-8deg);border:2px solid var(--joy);color:var(--joy);border-radius:6px;padding:0 8px;font:700 .8rem/1.6 var(--sans);letter-spacing:.2em;background:rgba(27,32,39,.75)}
+.code{text-align:center;font:800 2.8rem/1.2 var(--sans);letter-spacing:.24em;margin:14px 0 0!important;padding-left:.24em;background:linear-gradient(90deg,var(--joy),var(--self));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nm{text-align:center}
+.card h2.nm{font-size:1.5rem}
+.desc{border-left:3px solid var(--joy);padding:2px 0 2px 14px}
+h3{font:700 .95rem var(--sans);letter-spacing:.1em;margin:26px 0 10px;color:var(--mute)}
+.letters{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.let{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:.9rem;line-height:1.7}
+.let b{font:800 1.8rem/1.1 var(--sans);color:var(--joy);width:1em;flex:none}
+.row{display:grid;grid-template-columns:5.8em 1fr 5.8em;gap:10px;align-items:center;font:.8rem var(--sans);margin:10px 0;color:var(--mute)}
+.row span:last-child{text-align:right}
+.bar{height:12px;border-radius:6px;overflow:hidden;background:var(--self)}
+.bar i{display:block;height:100%;background:var(--joy)}
+.hit{font-weight:700;color:var(--ink)}
+details{margin-top:24px;font-size:.92rem;border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-family:var(--sans)}
+details p{text-indent:2em;margin:8px 0}
+@media (max-width:420px){.card{padding:22px 16px 16px}h1{font-size:1.6rem}.code{font-size:2.3rem}.row{grid-template-columns:5em 1fr 5em;gap:6px}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px;margin-bottom:6px}
+.gc{border-radius:12px;border:1px solid var(--line);text-align:center;padding:8px 4px 10px}
+.gc svg{display:block;width:72%;height:auto;margin:0 auto 4px}
+.gc b{display:block;font:800 .95rem var(--sans);color:var(--gc);letter-spacing:.14em}
+.gc span{display:block;font:.76rem/1.4 var(--sans);color:var(--mute)}
+</style>
+</head>
+<body>
+<header class="top"><span>社会 · 本分 · 稳定</span><span id="no"></span></header>
+<main>
+<h1>你是哪种新世界人？</h1>
+<p class="sub">BNWI · 美丽新世界人格指标　共32题</p>
+<div class="prog" aria-hidden="true"><i id="pg"></i></div>
+<div class="card" id="g"></div>
+<details>
+<summary>创作说明（体裁：互动人格测试 BNWI）</summary>
+<p>灵感来源：在书中，世界国用人工孵化把人分成阿尔法到伊普西隆五个种姓，再用条件反射、睡眠教育和嗦麻，让每个人都满足于被安排好的位置。这个测试反过来，想看看人真实的倾向有多不同。测试命名为BNWI（Brave New World Indicator，美丽新世界人格指标），仿照MBTI设四个维度：秩序/自由、享乐/意义、集体/个体、科技/人文，每次从题库中随机抽取32道五档量表题，得出16种人格，对应书中人物或社会角色。</p>
+<p>创作意图：让读者在作答中思考自己的立场，并追问：被分类，是否也是一种被塑造？</p>
+</details>
+</main>
+<script>
+var P=[['O','F','秩序','自由'],['H','M','享乐','意义'],['C','I','集体','个体'],['S','A','科技','人文']];
+var X={O:'秩序（Order）：你相信规则与稳定能保护人，愿意为整体的运转让出一部分个人空间。',
+F:'自由（Freedom）：你重视自己做决定的权利，宁可承担风险，也不愿被别人安排。',
+H:'享乐（Hedonism）：你认为舒适与快乐本身就有价值，倾向于避开不必要的痛苦。',
+M:'意义（Meaning）：你愿意为值得的事承受不适，认为深度往往要用痛苦去换。',
+C:'集体（Collective）：你在归属中获得安全感，习惯考虑他人与群体的感受。',
+I:'个体（Individual）：你看重属于自己的空间、关系与判断，不怕与众不同。',
+S:'科技（Science）：你相信方法、数据与技术，习惯用效率和逻辑理解世界。',
+A:'人文（Arts）：你更关注情感、语言与艺术，总想知道事情对“人”意味着什么。'};
+var Q=[
+[[1,'有人替我把复杂的事安排妥当，我会感到轻松。'],[-1,'即使规则合理，我也想知道自己有没有另一种选择。'],[1,'一个社会如果人人各行其是，迟早会乱。'],[-1,'我宁愿走一条没人走过的路，也不想走大家都说安全的路。'],[1,'稳定的日常让我觉得踏实，而不是无聊。'],[-1,'被预测、被归类，哪怕预测得很准，也让我不太舒服。'],[1,'为了整体运转顺利，个人有时应该克制自己的想法。'],[-1,'犯错的自由，比不犯错的保证更重要。']],
+[[1,'能让人立刻心情变好的东西，没什么好拒绝的。'],[-1,'有些难过值得被认真感受，不该被立刻抹平。'],[1,'生活的首要目标，是尽可能少一点烦恼。'],[-1,'我愿意为一件有意义的事，忍受一段不舒服的日子。'],[1,'一场热闹的娱乐，对我的吸引力常常超过一本沉重的书。'],[-1,'比起一直快乐，我更怕一辈子没想明白自己为什么活着。'],[1,'痛苦大多没有意义，能避开就该避开。'],[-1,'真正的深刻，往往离不开一点痛苦。']],
+[[1,'融入集体、和大家步调一致，会让我觉得安心。'],[-1,'我需要一块完全属于自己的空间，别人不该随便进来。'],[1,'如果大家都反对，我多半会重新考虑自己的想法。'],[-1,'一份只属于我和某个人的关系，比广泛的热闹更珍贵。'],[1,'与其追求与众不同，我更在意是否被群体接纳。'],[-1,'就算被孤立，我也要保留自己的判断。'],[1,'把属于自己的东西拿出来共享，我并不介意。'],[-1,'听到“你和别人不太一样”，我常常觉得是种肯定。']],
+[[1,'许多社会问题，最终都能靠更好的技术和管理来解决。'],[-1,'一首诗或一幅画，有时比一份数据更能说明问题。'],[1,'比起一个系统“意味着什么”，我更想知道它“怎么运转”。'],[-1,'感受与情感不应该被当作可以调节的参数。'],[1,'效率与精确，是我评价一件事好坏的重要标准。'],[-1,'我常常会为一句话、一个画面停下来出神。'],[1,'如果技术能让所有人更健康、更长寿，付出一点代价是值得的。'],[-1,'衡量一个社会，不能只看它多先进，还要看它如何对待人。']]];
+var T={
+OHCS:['亨利·福斯特','你高效、合群，善于在规则里把日子过得轻快。你信任系统，也被系统善待，所以很少追问它的代价。盲点：太顺利的时候，容易忘了自己的想法究竟从哪里来。'],
+OHCA:['感官电影的常客','你爱热闹，爱被声光和情绪包围，愿意和大家一起分享快乐，在群体中最自在。盲点：热闹散去之后，你可能不愿面对内心的那一点空白。'],
+OHIS:['条件反射技师','你相信流程与方法，喜欢把事情做得精准，也享受独自把问题解决的满足，很少质疑规则本身。盲点：你可能只关心“怎么做”，却不问“为什么做”。'],
+OHIA:['列宁娜·克朗','你顺着生活的节奏走，温柔随和，却会在某个瞬间被一份说不清的情感绊住，内心比表面更丰富。盲点：你习惯把困惑压下去，而它也许正是在提醒你什么。'],
+OMCS:['穆斯塔法·蒙德','你清楚真相的重量，仍选择维护秩序，因为你更怕混乱带来的伤害。你理性、克制，也有些孤独。盲点：你可能把“替别人做决定”当成了自己的责任。'],
+OMCA:['保险柜里的禁书守护者','你珍惜文字与思想，却倾向把它们保护在安全的范围里，只与少数人分享。你温和而审慎。盲点：保护得太好，思想也就没有机会生长。'],
+OMIS:['孵化中心主任','你重视秩序、效率与体面，心里却藏着一段不愿示人的经历，常在“应该”与“想要”之间摇摆。盲点：你维护的体面，也许正压住最真实的自己。'],
+OMIA:['沉默的档案员','你默默观察与记录，不张扬也不反抗，心里始终保存着对“从前”的记忆。你细腻、内敛。盲点：只记录而不表达，别人就无从知道你的想法。'],
+FHCS:['保留地的游客','你爱新鲜刺激，对不同的生活充满好奇，同时离不开熟悉的圈子，随时可以回到舒适区。盲点：你看到了“另一种生活”，却可能只把它当成风景。'],
+FHCA:['村落祭典的舞者','你容易被热烈、原始的情绪打动，愿意与人群一起狂欢，用身体而不是语言表达自由。盲点：投入太深时，你也许分不清那是自己的选择，还是群体的情绪。'],
+FHIS:['伯纳德·马克思','你敏锐、聪明、有些孤僻，看得出这个世界的问题，却又渴望被认可，反叛里常带着不安。盲点：一点虚荣与掌声，就可能动摇你的立场。'],
+FHIA:['感官诗人','你追求强烈的体验，用文字、声音或身体表达自己，不愿被任何标签束缚。你自由，也有些任性。盲点：体验本身不等于意义，别让感受停在表面。'],
+FMCS:['岛上的流放者','你理性、有理想，追求有意义的生活，也愿意与志同道合的人并肩推动改变。盲点：为理想付出很多时，别忘了照顾自己与同伴的现实处境。'],
+FMCA:['禁书的传阅者','你相信思想会传染，愿意把一句诗、一本书悄悄递给下一个人，在小圈子里点亮火种。盲点：你需要有人回应，否则容易陷入“没人懂我”的失落。'],
+FMIS:['赫姆霍尔兹·华生','你擅长表达，也厌倦空洞，想写出真正有分量的东西，哪怕因此被边缘化。你冷静而有锋芒。盲点：过于挑剔，可能让你错过许多不完美却真实的东西。'],
+FMIA:['野人约翰','你把自由与意义看得比舒适更重，宁可痛苦、孤独，也不肯把自己交出去。你真诚而炽烈。盲点：太绝对的时候，容易伤到自己，也伤到理解你的人。']};
+var Q2=[[[1,'我更喜欢事情按计划进行，而不是临时变卦。'],[1,'规矩定得清楚，大家反而更自在。'],[-1,'听到“你只需要照做”，我的第一反应是想问为什么。'],[-1,'我愿意为了尝试新的可能，放弃已经拥有的安稳。']],
+[[1,'日子过得轻松愉快，本身就是一种成就。'],[1,'遇到烦心事，我更想先让自己舒服一点，再去想别的。'],[-1,'我更愿意做一件难但值得的事，而不是一件轻松却没意义的事。'],[-1,'一段完全没有波折的人生，我会觉得缺了点什么。']],
+[[1,'和大家一起做同样的事，会让我感到愉快。'],[1,'我很在意自己在群体里是不是合群。'],[-1,'我常常觉得，真正了解我的人只需要一两个。'],[-1,'热闹之后，我总需要独自待一会儿才能恢复。']],
+[[1,'遇到分歧时，我更相信实验和证据，而不是个人感受。'],[1,'我很欣赏设计精巧、运转高效的系统。'],[-1,'我更容易被一段文字或旋律打动，而不是一张图表。'],[-1,'有些东西无法被测量，却依然非常重要。']]];
+Q2.forEach(function(a,d){Q[d]=Q[d].concat(a)});
+var TB=[['如果必须二选一，你更想要：','一个安稳可靠、一切有序的生活','一个充满变数、由我做主的生活'],['如果必须二选一，你更想要：','轻松愉快、少有烦恼的一生','有重量、有意义，哪怕充满波折的一生'],['如果必须二选一，你更想要：','一个人人相互依靠的温暖群体','一份只属于自己的自由与独处'],['如果必须二选一，你更想要：','一个由理性与技术运转的世界','一个由情感与艺术滋养的世界']];
+var GP={O:{H:['顺应者','#e2557f','#3b2431'],M:['守序者','#5b84d6','#243248']},F:{H:['越界者','#e9a23b','#3d3322'],M:['觉醒者','#35c2a4','#1f3b33']}};
+function gp(c){return GP[c[0]][c[1]]}
+var SK=['#f2c9a5','#dfa97d','#bf8458','#8d5a38'];
+var HS={slick:{o:[[36,34],[35,24],[40,16],[50,12],[60,14],[66,21],[65,34]],i:[[38,34],[40,25],[45,22],[52,19],[58,21],[62,25],[63,34]],x:[[.45,'47,13 58,13 62,17 53,16']]},
+pomp:{o:[[35,34],[34,24],[39,14],[50,9],[61,12],[67,20],[65,34]],i:[[38,34],[40,25],[46,21],[52,18],[58,21],[62,25],[63,34]],x:[[.45,'45,12 54,9 61,12 50,14']]},
+messy:{o:[[36,34],[34,22],[40,24],[42,13],[49,20],[55,10],[60,20],[66,14],[66,24],[68,34]],i:[[38,34],[40,27],[43,24],[46,22],[50,21],[54,21],[58,22],[61,23],[63,27],[64,34]],x:[]},
+bob:{o:[[34,58],[32,36],[35,22],[44,14],[56,14],[65,22],[68,36],[66,58]],i:[[41,56],[40,36],[42,26],[47,21],[53,21],[58,26],[60,36],[59,56]],x:[[.4,'45,14 56,14 61,18 49,18']]},
+hood:{o:[[33,58],[30,34],[36,18],[50,11],[64,18],[70,34],[67,58]],i:[[43,52],[40,36],[43,25],[50,20],[57,25],[60,36],[57,52]],x:[]}};
+HS.crown={o:HS.slick.o,i:HS.slick.i,x:[[.45,'47,13 58,13 62,17 53,16'],['#ff9ec0','37,24 40,21 43,24 40,27'],['#ffd24a','46,19 49,16 52,19 49,22'],['#fff','56,21 59,18 62,21 59,24'],['#ff9ec0','35,30 37,28 39,30 37,32']]};
+var HP={hat:[['#e8c460','38,26 40,16 50,14 50,26'],['#f6dc8a','50,14 60,16 62,26 50,26'],['#c0392b','38,22 62,22 62,26 38,22'],['#c99f45','20,28 50,23 50,32 27,33'],['#e6bf5e','50,23 80,28 73,33 50,32'],['#b28a38','27,33 50,32 73,33 50,37']],
+beret:[['#2b2b2b','34,26 37,18 50,14 48,26'],['#3c3c3c','50,14 62,16 69,21 67,26 48,26'],['#505050','50,14 62,16 58,20 50,18'],['#2b2b2b','48,11 52,11 52,14 48,14']],
+bald:[[-.2,'36,30 38,28 38,44 36,44'],[0,'64,30 62,28 62,44 64,44'],['rgba(255,255,255,.28)','45,20 50,18 55,20 50,23']]};
+var HB={bob:'33,58 31,36 34,21 50,13 66,21 69,36 67,58',hood:'33,58 30,34 36,17 50,10 64,17 70,34 67,58'};
+function q(){return Array.prototype.map.call(arguments,function(p){return p.join(',')}).join(' ')}
+function ent(e,H){return pl(typeof e[0]=='number'?tn(H,e[0]):e[0],e[1])}
+function hair(k,H){if(HP[k])return HP[k].map(function(e){return ent(e,H)}).join('');
+var s=HS[k],r='',n=s.o.length;for(var j=0;j<n-1;j++){var t=j/(n-2),b=-.38+.62*Math.sin(Math.PI*(t*.8+.1))+(j%2?.05:-.05),a=s.o[j],c=s.o[j+1],d=s.i[j],e=s.i[j+1];
+r+=pl(tn(H,b),q(a,c,e))+pl(tn(H,b-.14),q(a,e,d))}
+return r+s.x.map(function(e){return ent(e,H)}).join('')}
+function hb(k,H){return HB[k]?pl(tn(H,-.5),HB[k]):''}
+var BR={n:'M40 32L47 31M53 31L60 32',w:'M40 33L47 30M53 30L60 33',d:'M40 30L47 33M53 33L60 30',u:'M40 29L47 27.5M53 27.5L60 29',s:'M40 28.5L47 28M53 32L60 31'};
+function sp(d){return '<path d="'+d+'" stroke="#3a1c14" stroke-width="1.8" fill="none" stroke-linecap="round"/>'}
+var EY={o:pl('#1b1b22','42,35.5 47,34.5 47,38.5 42,38.5')+pl('#1b1b22','53,34.5 58,35.5 58,38.5 53,38.5'),
+w:pl('#1b1b22','41.5,34 47.5,33.5 47.5,39.5 41.5,39')+pl('#1b1b22','52.5,33.5 58.5,34 58.5,39 52.5,39.5')+pl('#fff','44,35 45.6,35 45.6,36.6 44,36.6')+pl('#fff','55,35 56.6,35 56.6,36.6 55,36.6'),
+h:'<path d="M41.5 38Q44.5 33.5 47.5 38M52.5 38Q55.5 33.5 58.5 38" stroke="#1b1b22" stroke-width="1.9" fill="none" stroke-linecap="round"/>',
+c:'<path d="M41.5 36Q44.5 39.5 47.5 36M52.5 36Q55.5 39.5 58.5 36" stroke="#1b1b22" stroke-width="1.9" fill="none" stroke-linecap="round"/>',
+s:pl('#1b1b22','43.5,35 48.5,34.5 48.5,38.5 43.5,38.5')+pl('#1b1b22','54.5,34.5 59.5,35 59.5,38.5 54.5,38.5'),
+z:pl('#1b1b22','40.5,35 45.5,34.5 45.5,38.5 40.5,38.5')+pl('#1b1b22','51.5,34.5 56.5,35 56.5,38.5 51.5,38.5'),
+f:pl('#1b1b22','42,36.8 47,36.5 47,38.5 42,38.5')+pl('#1b1b22','53,36.5 58,36.8 58,38.5 53,38.5')+'<path d="M41 35.6H48M52 35.6H59" stroke="#2a1d14" stroke-width="1.4"/>'};
+var MO={smile:sp('M45 43Q50 48 55 43'),flat:sp('M45 44H55'),worry:sp('M45 47Q50 42 55 47'),small:sp('M46 44Q50 46 54 44'),smirk:sp('M45 45Q52 47 57 42'),
+grin:pl('#3a1c14','43,42 57,42 55,49 50,51 45,49')+pl('#fff','44,42 56,42 55.5,44.5 44.5,44.5'),o:pl('#3a1c14','47,42 53,42 54,49 46,49'),p:pl('#3a1c14','47,43 53,43 52.5,47.5 47.5,47.5')};
+var PRP={
+OHCS:'R:#b98a4f|66,70 90,66 94,104 70,108;R:#f4f1e8|68,73 88,69 91,101 71,105;R:#2ea36b|73,88 77,93 86,80 84,78 77,88 75,85;R:#8a8f98|74,66 82,65 82,71 74,72',
+OHCA:'C:#f4f4f4|36,100 64,100 60,134 40,134;C:#e04a4a|40,100 46,100 45,134 41,134;C:#e04a4a|53,100 59,100 58,134 54,134;C:@#fff3b0|40,98,6;C:@#ffe58a|50,94,7;C:@#fff3b0|60,98,6;C:@#fff3b0|45,91,5;C:@#ffe9a0|56,91,5;R:@#fff3b0|75,92,3.5',
+OHIS:'B:#f1f4f7|30,56 45,54 43,128 28,126;B:#d5dce3|55,54 70,56 72,126 57,128;R:#2e8b4a|73,102 75,102 75,76 73,76;R:@#e0344f|74,72,6;R:#e0344f|70,70 74,64 78,70;L:#6b4a8a|10,92 30,90 32,110 12,112;L:#e8dfc8|12,94 29,92 30,108 13,110',
+OHIA:'R:#ff4f7d|75,92 64,79 66,71 72,69 75,75 78,69 84,71 86,79;R:#ff7b9d|75,92 75,75 78,69 84,71 86,79;L:@#e8e8f0|25,106,8;L:@#ff7ba3|25,106,4',
+OMCS:'B:#26365c|31,100 50,106 49,154 28,150;B:#334a7e|50,106 69,100 72,150 51,154;R:@#5aa3c8|75,88,12;R:@#7ec36d|71,84,5;R:@#7ec36d|79,93,4;R:#8a8f98|71,99 79,99 77,105 73,105',
+OMCA:'B:#7b4f2c|38,72 62,70 64,100 40,102;B:#e8c46a|46,84 56,83 56,92 46,93;B:○#e8c46a|51,82,3.5;#6d7683|3,150 36,150 36,178 3,178;#8e98a6|3,150 36,150 30,156 8,156;@#d9dee5|19,166,5',
+OMIS:'B:#1a1a1a|47,58 53,58 55,66 50,94 45,66;R:#2a2a2a|74,100 97,62 100,64 77,102;R:@#e04a4a|99,62,3.5;L:#bfe9ff|18,86 28,86 28,114 18,114;L:#7bd0a8|18,98 28,98 28,114 18,114;L:@#f4b6c2|23,106,3',
+OMIA:'C:#d9a441|26,102 74,102 74,112 26,112;C:#f0c25a|28,92 72,92 72,102 28,102;C:#c78f2e|26,82 74,82 74,92 26,92;C:#f0c25a|30,72 70,72 70,82 30,82',
+FHCS:'R:#333|63,88 87,88 87,104 63,104;R:#555|69,85 79,85 77,88 71,88;R:@#9fd8ff|75,96,5;R:@#2a4a66|75,96,2.5',
+FHCA:'R:#c9533a|66,94 88,94 86,112 68,112;R:#f4d9a8|66,92 88,92 88,96 66,96;L:#ff7ba3|20,96 8,124 13,126 27,102;L:#ffd24a|24,98 18,126 23,126 30,104',
+FHIS:'@#fff|86,40,12;#fff|78,48 82,56 86,50;~#333|86,46,16,?',
+FHIA:'R:#e9dfc0|76,104 99,62 100,70 82,108;R:#8a6a3a|74,106 99,62 100,63 75,108;L:#f4f1e8|8,100 26,98 26,126 8,128;L:#b8b0a0|11,106 23,105 23,107 11,108;L:#b8b0a0|11,112 23,111 23,113 11,114;~#ff9ec0|18,60,16,♪;~#ffd24a|10,80,13,♪',
+FMCS:'R:#8a5a3b|62,104 88,104 88,130 62,130;R:#6e4529|62,104 88,104 88,110 62,110;R:#e8c46a|73,102 77,102 77,106 73,106;#8a5a3b|8,148 11,148 12,176 8,176;#2fb59a|0,146 10,138 22,146 10,152;#e8d39a|0,176 32,176 26,183 6,183',
+FMCA:'B:#17382f|27,100 50,108 50,156 24,152;B:#1f4d42|50,108 73,100 76,152 50,156;L:#7b4f2c|10,92 30,90 32,114 12,116;L:#f1e7c8|12,94 28,92 29,112 13,114;L:@#ffd24a|20,84,3',
+FMIS:'R:#f4f1e8|66,84 90,82 92,114 68,116;R:#8a8f98|70,90 86,89 86,91 70,92;R:#8a8f98|70,96 84,95 84,97 70,98;R:#8a8f98|70,102 88,101 88,103 70,104;R:#e04a4a|88,120 98,84 101,85 91,121',
+FMIA:'B:#8a6a3a|30,100 50,106 70,100 66,120 58,112 50,124 42,112 34,120;L:#5b3a1e|8,92 34,90 36,122 10,124;L:#f1e7c8|11,95 32,93 33,119 12,121;L:#cdbf99|21,95 21,119 23,119 23,95;L:#e8c46a|14,102 22,102 22,104 14,104'};
+var PH={OHCA:'rgba(224,74,74,.62)|39,33 49,33 49,40 39,40;rgba(51,195,232,.62)|51,33 61,33 61,40 51,40;#222|49,35 51,35 51,37 49,37;rgba(255,90,110,.5)|39,42 45,41 45,46 40,46;rgba(255,90,110,.5)|55,41 61,42 60,46 55,46',OHIS:'@#8fd3e8|44,24,4;@#8fd3e8|56,24,4;#444|38,24 62,24 62,26 38,26',OMCA:'○#222|44,37,6.5;○#222|56,37,6.5',OMIA:'○#222|44,37,6.5;○#222|56,37,6.5',FHIS:'#7cc4e8|63,22 67,30 59,30;#7cc4e8|70,34 73,40 67,40'};
+var IM={OHCS:['slick','#2b2118',0,'o','n','smile',0,[18,84,36,102],[80,82,72,90],[36,138,32,172],[64,138,68,172],[-4,0,0],[0,0]],
+OHCA:['messy','#7a4a28',1,'w','u','p',-2,[20,86,34,116],[84,72,70,50],[40,138,36,172],[60,138,66,172],[3,0,0],[0,0]],
+OHIS:['slick','#4a3a30',1,'o','n','small',4,[22,80,14,96],[86,70,94,50],[42,138,38,172],[60,138,66,172],[6,0,0],[0,0]],
+OHIA:['bob','#ff8fb8',2,'o','u','small',-2,[22,82,30,104],[84,66,82,50],[44,138,42,172],[66,140,62,172],[-10,-1,0],[0,0]],
+OMCS:['slick','#eeeeee',0,'f','n','small',0,[24,84,40,104],[88,74,86,66],[40,138,40,172],[60,138,60,172],[-3,0,0],[0,0]],
+OMCA:['slick','#2b2b36',3,'o','w','flat',-1,[28,88,60,86],[72,88,40,86],[42,138,40,172],[58,138,60,172],[8,-1,1],[0,0]],
+OMIS:['bald','#a8a8a8',1,'o','d','flat',-2,[26,80,22,102],[84,76,84,64],[39,138,36,172],[61,138,64,172],[-4,0,0],[-35,0]],
+OMIA:['slick','#5a4638',2,'f','n','flat',0,[18,88,28,104],[82,88,72,104],[42,138,40,172],[58,138,60,172],[4,0,1],[0,0]],
+FHCS:['hat','#e8c46a',0,'o','u','smile',2,[14,70,6,52],[88,76,86,64],[34,140,30,172],[62,136,70,172],[6,0,0],[0,0]],
+FHCA:['crown','#2b2118',3,'h','n','smile',-4,[12,60,6,34],[90,66,92,50],[28,138,16,160],[58,140,62,172],[-8,0,0],[0,0]],
+FHIS:['pomp','#8a5a2b',0,'z','w','small',-3,[32,86,60,90],[76,66,58,54],[44,138,46,172],[56,138,54,172],[12,-1,1],[0,0]],
+FHIA:['beret','',1,'f','u','small',2,[24,84,26,102],[92,70,88,52],[40,138,38,172],[58,138,52,172],[-12,1,0],[-25,0]],
+FMCS:['slick','#1f1f26',2,'z','n','flat',3,[22,78,14,92],[78,84,80,106],[34,140,24,172],[64,136,72,170],[4,1,0],[0,0]],
+FMCA:['hood','#1f4d42',1,'s','s','small',-2,[22,88,18,84],[72,72,57,52],[40,138,38,172],[62,138,66,172],[6,1,0],[0,0]],
+FMIS:['pomp','#3a2d4a',0,'o','d','flat',0,[22,82,36,102],[84,76,82,60],[34,138,26,172],[66,138,74,172],[-4,0,0],[0,0]],
+FMIA:['messy','#cfa94c',0,'o','w','worry',2,[22,90,22,106],[82,62,86,40],[34,138,28,172],[64,138,68,172],[-8,0,0],[0,0]]};
+function tn(h,k){var n=parseInt(h.slice(1),16),t=k<0?0:255,a=Math.abs(k);function m(v){return Math.round(v+(t-v)*a)}return '#'+((1<<24)+(m(n>>16)<<16)+(m(n>>8&255)<<8)+m(n&255)).toString(16).slice(1)}
+function pl(c,p){return '<polygon points="'+p+'" fill="'+c+'"/>'}
+function dr(s){return s.split(';').map(function(q){var a=q.split('|'),c=a[0],v=a[1].split(','),t=c[0];
+if(t=='@')return '<circle cx="'+v[0]+'" cy="'+v[1]+'" r="'+v[2]+'" fill="'+c.slice(1)+'"/>';
+if(t=='○')return '<circle cx="'+v[0]+'" cy="'+v[1]+'" r="'+v[2]+'" fill="none" stroke="'+c.slice(1)+'" stroke-width="1.8"/>';
+if(t=='~')return '<text x="'+v[0]+'" y="'+v[1]+'" font-size="'+v[2]+'" text-anchor="middle" fill="'+c.slice(1)+'">'+v[3]+'</text>';
+return pl(c,a[1])}).join('')}
+function lb(a,b,w1,w2,c){var dx=b[0]-a[0],dy=b[1]-a[1],L=Math.hypot(dx,dy)||1,nx=-dy/L,ny=dx/L;
+function P(p,w,s){return [p[0]+nx*w/2*s,p[1]+ny*w/2*s]}
+return pl(tn(c,-.22),q(P(a,w1,1),a,b,P(b,w2,1)))+pl(c,q(a,P(a,w1,-1),P(b,w2,-1),b))}
+function hn(p,S){return pl(tn(S,-.15),q([p[0]-3.5,p[1]-3],[p[0],p[1]-3],[p[0]+.5,p[1]+5],[p[0]-3,p[1]+4]))+pl(S,q([p[0],p[1]-3],[p[0]+3.5,p[1]-3],[p[0]+3,p[1]+4],[p[0]+.5,p[1]+5]))}
+function sh2(f){return pl('#151a21',q([f[0]-7,f[1]-2],[f[0]+7,f[1]-2],[f[0]+10,f[1]+6],[f[0]-10,f[1]+6]))+pl('#232d38',q([f[0],f[1]-2],[f[0]+7,f[1]-2],[f[0]+10,f[1]+6],[f[0],f[1]+6]))}
+function art(c,face){var a=IM[c],hr=a[0],H=a[1],S=SK[a[2]],l=a[6],AL=a[7],AR=a[8],LG=a[9],RG=a[10],hd=a[11],pr=a[12],G=gp(c)[1],P=tn(G,-.55),B=tn(G,-.1),
+SL=[33+l,60],SR=[67+l,60],NK=[50+l,56],g={B:'',F:'',R:'',L:''};
+PRP[c].split(';').forEach(function(x){var k=/^[BRLC]:/.test(x)?x[0]:'F';if(k=='C')k='F';g[k]+=(g[k]?';':'')+x.replace(/^[BRLC]:/,'')});
+function grp(k){if(!g[k])return '';var hp=k=='R'?AR:AL,d=k=='R'?[75,98]:[25,100],r=pr[k=='R'?0:1];return '<g transform="translate('+(hp[2]-d[0])+' '+(hp[3]-d[1])+') rotate('+r+' '+d[0]+' '+d[1]+')">'+dr(g[k])+'</g>'}
+var s='<ellipse cx="50" cy="180" rx="30" ry="4" fill="#000" opacity=".4"/>'
++lb([42,104],[LG[0],LG[1]],14,11,P)+lb([LG[0],LG[1]],[LG[2],LG[3]],11,9,P)+sh2([LG[2],LG[3]])
++lb([58,104],[RG[0],RG[1]],14,11,tn(P,.08))+lb([RG[0],RG[1]],[RG[2],RG[3]],11,9,tn(P,.08))+sh2([RG[2],RG[3]])
++pl(tn(P,-.1),'36,98 64,98 62,112 38,112')
++pl(tn(G,-.25),q(SL,NK,[50,106],[36,106]))+pl(G,q(NK,SR,[64,106],[50,106]))+pl(tn(G,.22),q(NK,SR,[60+l/2,76]))+pl(tn(G,-.4),'36,100 64,100 64,106 36,106')
++(g.B?dr(g.B):'')
++lb([SL[0]+2,SL[1]+2],[AL[0],AL[1]],9,8,B)+lb([AL[0],AL[1]],[AL[2],AL[3]],8,6,B)+hn([AL[2],AL[3]],S)
++lb([SR[0]-2,SR[1]+2],[AR[0],AR[1]],9,8,tn(B,.1))+lb([AR[0],AR[1]],[AR[2],AR[3]],8,6,tn(B,.1))+hn([AR[2],AR[3]],S)
++pl(tn(S,-.25),q([45+l,48],[55+l,48],[56+l,58],[44+l,58]))+pl('#f3f5f7',q([44+l,57],[50+l,67],[56+l,57],[50+l,59]))
++'<g transform="translate('+(50+l+hd[1])+' '+(54+hd[2])+') rotate('+hd[0]+') scale(1.25) translate(-50 -52)">'
++hb(hr,H)+pl(tn(S,-.18),'38,24 50,18 50,52 43,48 37,38')+pl(S,'50,18 62,24 63,38 57,48 50,52')+pl(tn(S,.2),'38,24 50,18 62,24 50,30')+pl(tn(S,-.08),'37,38 43,48 50,52 50,44')+pl(tn(S,.12),'63,38 57,48 50,52 50,44')+pl(tn(S,-.22),'49,38 53,45 49,45')
++hair(hr,H)+EY[a[3]]+'<path d="'+BR[a[4]]+'" stroke="#2a1d14" stroke-width="1.6" fill="none"/>'+MO[a[5]]+(PH[c]?dr(PH[c]):'')+'</g>'
++grp('R')+grp('L')+(g.F?dr(g.F):'');
+return '<svg viewBox="'+(face?'22 -2 56 62':'0 -4 100 194')+'" role="img" aria-label="'+T[c][0]+'插画">'+s+'</svg>'}
+var LB=['强烈反对','反对','中立','赞成','强烈赞成'],L=[],A=[],B=[],k=0,NO='',g=document.getElementById('g');
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function build(){var o=[];for(var d=0;d<4;d++){var p=sh(Q[d].filter(function(q){return q[0]>0})),n=sh(Q[d].filter(function(q){return q[0]<0})),np=Math.random()<.5?3:5;
+p.slice(0,np).concat(n.slice(0,8-np)).forEach(function(q){o.push([d,q[0],q[1]])})}return sh(o)}
+function prog(v){document.getElementById('pg').style.width=v+'%'}
+function gallery(){g.innerHTML='';prog(0);document.getElementById('no').textContent='人格图鉴';g.append(el('h2','','16 种新世界人格'));
+[['O','H'],['O','M'],['F','H'],['F','M']].forEach(function(p){var gg=GP[p[0]][p[1]],hh=el('h3','',gg[0]+' · '+p[0]+p[1]),w=el('div','grid');hh.style.color=gg[1];
+Object.keys(T).filter(function(c){return c[0]==p[0]&&c[1]==p[1]}).forEach(function(c){var d=el('div','gc');d.style.setProperty('--gc',gg[1]);d.style.background=gg[2];d.innerHTML=art(c);d.append(el('b','',c),el('span','',T[c][0]));w.append(d)});g.append(hh,w)});
+var b=el('button','go','返回');b.onclick=intro;g.append(b)}
+function intro(){g.innerHTML='';prog(0);NO='';document.getElementById('no').textContent='受试者 № ----';
+var m=el('div','mini');['OHCS','OHIA','OMCS','FHIS','FMIA'].forEach(function(c){var s=el('span');s.innerHTML=art(c,1);s.style.background=gp(c)[2];s.style.borderColor=gp(c)[1];m.append(s)});
+var b=el('button','go','开始测试');b.onclick=start;var v=el('button','','查看全部 16 种人格');v.onclick=gallery;
+g.append(m,el('h2','','孵化中心欢迎你'),el('p','','请想象自己是世界国的一名公民。接下来有 32 道陈述，请凭直觉选择你同意的程度，没有对错。完成后，你会领到属于自己的新世界人格档案：16 种人格，你会是哪一种？'),b,v)}
+function start(){L=build();A=[];B=[];k=0;NO=String(Math.floor(1000+Math.random()*9000));document.getElementById('no').textContent='受试者 № '+NO;ask()}
+function ask(){var q=L[k];prog(k/L.length*100);g.innerHTML='';
+g.append(el('p','n','第 '+(k+1)+' / '+L.length+' 题'),el('h2','q',q[2]));
+var r=el('div','lk');LB.forEach(function(t,i){var b=el('button',A[k]==i+1?'on':'');b.setAttribute('aria-label',t);b.title=t;
+b.style.setProperty('--s',[46,36,28,36,46][i]+'px');b.style.setProperty('--c',i<2?'var(--self)':i==2?'var(--mute)':'var(--joy)');
+b.onclick=function(){A[k]=i+1;k++;k<L.length?ask():tie()};r.append(b)});
+var l=el('div','lkl');['强烈反对','中立','强烈赞成'].forEach(function(t){l.append(el('span','',t))});g.append(r,l);
+if(k>0){var s=el('button','back','← 上一题');s.onclick=function(){k--;ask()};g.append(s)}}
+function score(){var sc=[0,0,0,0];L.forEach(function(q,i){sc[q[0]]+=q[1]*(A[i]-3)});return sc}
+function tie(){var sc=score(),td=[0,1,2,3].filter(function(d){return sc[d]==0&&B[d]==null});if(!td.length)return fin(sc);
+var d=td[0],q=TB[d];g.innerHTML='';prog(100);
+g.append(el('p','n','加试：你在“'+P[d][2]+' / '+P[d][3]+'”上几乎持平'),el('h2','q',q[0]));
+[1,2].forEach(function(i){var b=el('button','',q[i]);b.onclick=function(){B[d]=i-1;tie()};g.append(b)})}
+function fin(sc){var c='',rows=[],ls=[];g.innerHTML='';prog(100);
+P.forEach(function(p,d){var w=sc[d]>0?0:sc[d]<0?1:B[d],x=sc[d]==0?(w==0?51:49):Math.round((sc[d]+16)/32*100),y=100-x;c+=p[w];
+var r=el('div','row'),b=el('div','bar'),f=el('i');f.style.width=x+'%';b.append(f);
+r.append(el('span',w==0?'hit':'',p[2]+' '+x+'%'),b,el('span',w==1?'hit':'',p[3]+' '+y+'%'));rows.push(r);
+var e=el('div','let');e.append(el('b','',p[w]),el('span','',X[p[w]]));ls.push(e)});
+var t=T[c],im=el('div','art'),lw=el('div','letters');var gg=gp(c);im.innerHTML='<div class="stage" style="--gc:'+gg[1]+';--gb:'+gg[2]+'"><span class="wm">'+gg[0]+'</span>'+art(c)+'<span class="stamp">已归档</span></div>';
+ls.forEach(function(e){lw.append(e)});
+g.append(el('p','n','新世界公民档案 · 受试者 № '+NO+' · '+gp(c)[0]),im,el('p','code',c),el('h2','nm',t[0]),el('p','desc',t[1]),el('h3','','这四个字母分别是'),lw,el('h3','','你在每个维度上的倾向'));
+rows.forEach(function(r){g.append(r)});
+var b=el('button','go','重新测试');b.onclick=start;g.append(b)}
+location.hash=='#gallery'?gallery():intro();
+</script>
+</body>
+</html>
